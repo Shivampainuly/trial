@@ -1,0 +1,17 @@
+{
+  "clinic":"Vista Clinics",
+  "location":"Moosapet, Hyderabad",
+  "phone":"090300 14422",
+  "theme":{"primary":"#111111","secondary":"#FFFFFF","accentGradient":"linear-gradient(135deg,#000000,#777777)","font":"Inter, system-ui, sans-serif"},
+  "services":[
+    {"id":"c1","title":"Cardiology","sub":["ECG","2D Echo","TMT","Holter","Ambulatory BP"]},
+    {"id":"g1","title":"Gastroenterology & Hepatology","sub":["UGI Endoscopy","Colonoscopy","Sigmoidoscopy","FibroScan","Foreign body removal"]},
+    {"id":"d1","title":"Advanced Diagnostics","sub":["Cardiac monitoring","Endoscopic procedures","Liver assessment"]}
+  ],
+  "doctors":[
+    {"id":"dr1","name":"Dr Ravi Teja Rao Babburi","title":"Interventional Cardiologist","qual":"MBBS, MD (Internal Medicine), DrNB (Cardiology)","expertise":["ECG","2D Echo","TMT","Holter","Ambulatory BP monitoring"],"booking":true},
+    {"id":"dr2","name":"Dr Spoorthi Kolla","title":"Gastroenterologist & Hepatologist","qual":"MBBS, MD (Internal Medicine), DM (Medical Gastroenterology)","expertise":["UGI Endoscopy","Colonoscopy","Sigmoidoscopy","FibroScan","Foreign body removal"],"booking":true}
+  ],
+  "booking":{"provider":"custom-placeholder","fields":["name","email","phone","service","doctor","preferred_date","message"]},
+  "seo":{"title":"Vista Clinics – Cardiology, Gastroenterology & Hepatology in Moosapet, Hyderabad","description":"Specialist care with clarity at every step.","keywords":"cardiology gastroenterology hepatology diagnostics Hyderabad Moosapet"}
+}
