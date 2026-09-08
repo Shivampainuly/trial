@@ -101,7 +101,10 @@ body[data-page="home"] .quick-actions b,body[data-page="home"] .specialty-item>b
 @media(max-width:560px){.mobile-booking-rail{position:fixed;left:12px;right:12px;bottom:12px;z-index:90;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px 10px 14px;background:rgba(255,255,255,.96);border:1px solid #d5e2e9;border-radius:18px;box-shadow:0 12px 36px rgba(22,32,42,.16);backdrop-filter:blur(16px)}.mobile-booking-rail span{font-size:11px;font-weight:700;color:#42545e}.mobile-booking-rail a{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border-radius:999px;background:#1769aa;color:#fff;font:700 12px Arial,Helvetica,sans-serif;text-decoration:none;white-space:nowrap}.mobile-booking-rail a:active{transform:translateY(1px)}}
 
 /* Glass navigation */
-.nav{backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.55);box-shadow:0 8px 28px rgba(15,23,42,.08)}
+.nav{position:relative;background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.38);box-shadow:0 10px 30px rgba(15,23,42,.08),inset 0 1px 0 rgba(255,255,255,.55);backdrop-filter:blur(18px) saturate(135%);-webkit-backdrop-filter:blur(18px) saturate(135%)}
+.nav:before{content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.16) 45%,transparent 70%);background-size:220% 100%;animation:vistaNavGlass 6s ease-in-out infinite}
+.nav a,.nav button{position:relative;z-index:1}
+@keyframes vistaNavGlass{0%,55%{background-position:120% 0}78%,100%{background-position:-120% 0}}
 
 /* Reduced-motion accessibility */
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
