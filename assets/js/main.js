@@ -1,3 +1,4 @@
+(()=>{const l=document.createElement('link');l.rel='stylesheet';l.href='assets/css/vista-font.css';document.head.appendChild(l)})();
 document.addEventListener('DOMContentLoaded',()=>{
 const nav=document.querySelector('.nav'),toggle=document.querySelector('.menu-toggle');if(toggle&&nav)toggle.addEventListener('click',()=>{const open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.setAttribute('aria-label',open?'Close navigation':'Open navigation')});
 const path=location.pathname,file=path.split('/').pop()||'index.html';const known=['','index.html','cardiology.html','gastroenterology.html','diagnostics.html','doctors.html','book-consultation.html','reviews.html','contact.html','about.html'];if(!known.includes(file)){location.replace('./index.html?redirected=1');return}
