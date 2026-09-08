@@ -35,14 +35,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 body[data-page="cardiology"] .page-hero,body[data-page="gastroenterology"] .page-hero,body[data-page="diagnostics"] .page-hero{max-width:1184px;margin:0 auto;padding:72px 28px 48px}
 body[data-page="cardiology"] .page-hero h1,body[data-page="gastroenterology"] .page-hero h1,body[data-page="diagnostics"] .page-hero h1{max-width:760px}
 body[data-page="cardiology"] .page-hero p,body[data-page="gastroenterology"] .page-hero p,body[data-page="diagnostics"] .page-hero p{max-width:620px;margin:18px 0 0;color:#52636d!important;font-size:15px;line-height:1.7}
-.service-list{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px!important;align-items:stretch!important}
-.service-item{min-height:0!important;height:auto!important;margin:0!important;padding:24px!important;border:1px solid #dfe8ec!important;border-radius:18px!important;background:#fff!important;box-shadow:0 6px 24px rgba(25,55,70,.04)!important;display:grid!important;grid-template-columns:auto 1fr auto!important;grid-template-rows:auto auto!important;column-gap:16px!important;align-content:start!important;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
+/* Service cards: no enclosing grey/outlined wrapper; the cards are the visual units. */
+.service-list{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px!important;align-items:stretch!important;border:0!important;background:transparent!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
+.service-item{min-height:0!important;height:auto!important;margin:0!important;padding:26px!important;border:1px solid #dfe8ec!important;border-radius:22px!important;background:#fff!important;box-shadow:0 7px 26px rgba(25,55,70,.045)!important;display:grid!important;grid-template-columns:auto 1fr auto!important;grid-template-rows:auto auto!important;column-gap:16px!important;align-content:start!important;transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
 .service-item:hover{transform:translateY(-3px);border-color:#a9c8db!important;box-shadow:0 14px 34px rgba(25,55,70,.08)!important;background:#fbfdfe!important}
-.service-item .number{grid-row:1 / span 2;display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#edf6fa;color:#1769aa;font-size:11px;font-weight:800}
+.service-item .number{grid-row:1 / span 2;display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:#edf6fa;color:#1769aa;font-size:11px;font-weight:800}
 .service-item h3{margin:1px 0 5px!important;font-family:Georgia,'Times New Roman',serif;font-size:24px!important;line-height:1.1!important}
 .service-item p{margin:0!important;color:#52636d!important;font-size:13px!important;line-height:1.6!important}
 .service-item:after{content:'→';grid-column:3;grid-row:1 / span 2;align-self:center;color:#1769aa;font-size:20px;transform:translateX(-3px);transition:transform .22s ease}
 .service-item:hover:after{transform:translateX(3px)}
+/* Five-item specialty lists end with a centered card instead of an orphaned left slot. */
+.service-item:last-child:nth-child(odd){grid-column:2}
 
 /* Doctors */
 body[data-page="doctors"] .doctor-photo{display:none!important}
@@ -54,13 +57,13 @@ body[data-page="doctors"] .provider-actions .text-link{padding:0;border:0}
 
 /* Homepage cards */
 body[data-page="home"] .quick-actions{gap:12px;padding-bottom:48px}
-body[data-page="home"] .quick-actions>a,body[data-page="home"] .quick-actions>a:first-child,body[data-page="home"] .quick-actions>a:last-child{border:1px solid #dfe8ec;border-radius:16px!important;min-height:116px;padding:22px;box-shadow:0 5px 20px rgba(25,55,70,.035);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
+body[data-page="home"] .quick-actions>a,body[data-page="home"] .quick-actions>a:first-child,body[data-page="home"] .quick-actions>a:last-child{border:1px solid #dfe8ec;border-radius:22px!important;min-height:116px;padding:22px;box-shadow:0 5px 20px rgba(25,55,70,.035);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
 body[data-page="home"] .quick-actions>a:hover{transform:translateY(-3px);background:#fff;border-color:#a9c8db;box-shadow:0 12px 30px rgba(25,55,70,.08);z-index:2}
 body[data-page="home"] .quick-actions>a:active{transform:translateY(0)}
 body[data-page="home"] .quick-actions b{right:20px;bottom:20px;transition:transform .22s ease}
 body[data-page="home"] .quick-actions>a:hover b{transform:translateX(4px)}
-body[data-page="home"] .specialty-row{border:0;overflow:visible;gap:14px}
-body[data-page="home"] .specialty-item{border:1px solid #dfe8ec!important;border-radius:18px!important;min-height:210px;box-shadow:0 6px 24px rgba(25,55,70,.035);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
+body[data-page="home"] .specialty-row{border:0;overflow:visible;gap:18px}
+body[data-page="home"] .specialty-item{border:1px solid #dfe8ec!important;border-radius:22px!important;min-height:210px;box-shadow:0 6px 24px rgba(25,55,70,.035);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease,background .22s ease}
 body[data-page="home"] .specialty-item:hover{background:#fff;transform:translateY(-3px);border-color:#a9c8db!important;box-shadow:0 13px 32px rgba(25,55,70,.08)}
 body[data-page="home"] .specialty-item b{transition:transform .22s ease}
 body[data-page="home"] .specialty-item:hover b{transform:translateX(4px)}
@@ -76,8 +79,12 @@ body[data-page="home"] .mini-map{min-height:270px}
 img,svg,video{max-width:100%;height:auto}
 
 /* Mobile */
+@media(max-width:900px){
+.service-list{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+.service-item:last-child:nth-child(odd){grid-column:auto}
+}
 @media(max-width:800px){
-.site-header{padding:12px 18px!important;flex-wrap:wrap;gap:8px}.menu-toggle{display:block!important;margin-left:auto}.nav{display:none!important;width:100%;flex-direction:column;align-items:stretch;gap:0!important;padding:8px 0 4px;border-top:1px solid #e7eef2;margin-top:6px}.nav.open{display:flex!important}.nav a{padding:11px 4px!important;font-size:14px!important}.nav a.active:after{display:none}.urgent-bar,.doctors-emergency{font-size:11px!important;padding:8px 14px!important}.service-list{grid-template-columns:1fr!important}.service-item{padding:21px!important}body[data-page="home"] .quick-actions{grid-template-columns:1fr 1fr!important}.home-section-title h2,.section-head h2,.page-hero h1,.home-location h2,.home-final h2{max-width:16ch}}
+.site-header{padding:12px 18px!important;flex-wrap:wrap;gap:8px}.menu-toggle{display:block!important;margin-left:auto}.nav{display:none!important;width:100%;flex-direction:column;align-items:stretch;gap:0!important;padding:8px 0 4px;border-top:1px solid #e7eef2;margin-top:6px}.nav.open{display:flex!important}.nav a{padding:11px 4px!important;font-size:14px!important}.nav a.active:after{display:none}.urgent-bar,.doctors-emergency{font-size:11px!important;padding:8px 14px!important}.service-list{grid-template-columns:1fr!important}.service-item{padding:22px!important}body[data-page="home"] .quick-actions{grid-template-columns:1fr 1fr!important}.home-section-title h2,.section-head h2,.page-hero h1,.home-location h2,.home-final h2{max-width:16ch}}
 @media(max-width:560px){
 body{padding-bottom:70px!important}body[data-page="home"]{padding-bottom:70px!important}body[data-page="home"] .quick-actions{grid-template-columns:1fr!important;padding-left:20px;padding-right:20px}body[data-page="home"] .quick-actions>a{min-height:100px}.actions,.home-actions{flex-direction:column;align-items:stretch}.actions .btn,.home-actions .home-btn{width:100%}body[data-page="cardiology"] .page-hero,body[data-page="gastroenterology"] .page-hero,body[data-page="diagnostics"] .page-hero{padding:52px 20px 36px}.service-item{grid-template-columns:auto 1fr!important}.service-item:after{display:none}body[data-page="home"] .hero-trust-strip{display:grid;grid-template-columns:1fr;max-width:none}body[data-page="home"] .hero-trust-strip>a,body[data-page="home"] .hero-trust-strip>span{width:100%}}
 
