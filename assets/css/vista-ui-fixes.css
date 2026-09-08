@@ -1,0 +1,83 @@
+/* Vista Clinics — responsive/layout correction layer */
+html,body{width:100%;max-width:100%;overflow-x:hidden}
+body{min-height:100vh}
+
+/* Keep the global header in normal document flow. This prevents sticky/fixed
+   positioning from becoming trapped by page containers or overlapping content. */
+.site-header{position:relative!important;top:auto!important;bottom:auto!important;transform:none!important;contain:initial!important}
+main{position:relative;z-index:0;display:block;width:100%}
+footer{position:relative!important;top:auto!important;bottom:auto!important;transform:none!important;clear:both;width:100%;margin-top:0}
+
+/* Consistent clickable controls */
+.btn,.home-btn,.header-book{border-radius:999px!important;min-height:42px;transition:transform .2s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease}
+.btn:hover,.home-btn:hover,.header-book:hover{transform:translateY(-2px)!important;box-shadow:0 10px 26px rgba(23,105,170,.14)}
+.btn-dark,.home-btn.primary,.header-book{background:#1769aa!important;color:#fff!important;border-color:#1769aa!important}
+.btn-light,.home-btn.secondary{background:#fff!important;color:#1769aa!important;border-color:#bfd3df!important}
+
+/* Service/detail pages: compact, balanced lists instead of stretched boxes. */
+body[data-page="cardiology"] .page-hero,
+body[data-page="gastroenterology"] .page-hero,
+body[data-page="diagnostics"] .page-hero{max-width:1184px;margin:0 auto;padding:72px 28px 48px}
+body[data-page="cardiology"] .page-hero h1,
+body[data-page="gastroenterology"] .page-hero h1,
+body[data-page="diagnostics"] .page-hero h1{max-width:760px}
+body[data-page="cardiology"] .page-hero p,
+body[data-page="gastroenterology"] .page-hero p,
+body[data-page="diagnostics"] .page-hero p{max-width:620px;margin:18px 0 0;color:#687781;font-size:15px;line-height:1.7}
+.service-list{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px!important;align-items:stretch!important}
+.service-item{min-height:0!important;height:auto!important;margin:0!important;padding:24px!important;border:1px solid #dfe8ec!important;border-radius:18px!important;background:#fff!important;box-shadow:0 6px 24px rgba(25,55,70,.04)!important;display:grid!important;grid-template-columns:auto 1fr!important;grid-template-rows:auto auto!important;column-gap:16px!important;align-content:start!important;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.service-item:hover{transform:translateY(-3px);border-color:#bfd5e0!important;box-shadow:0 14px 34px rgba(25,55,70,.08)!important}
+.service-item .number{grid-row:1 / span 2;display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#edf6fa;color:#1769aa;font-size:11px;font-weight:800}
+.service-item h3{margin:1px 0 5px!important;font-family:Georgia,'Times New Roman',serif;font-size:24px!important;line-height:1.1!important}
+.service-item p{margin:0!important;color:#71818a;font-size:12px!important;line-height:1.6!important}
+
+/* Doctors: remove the fake/empty photo blocks entirely. */
+body[data-page="doctors"] .doctor-photo{display:none!important}
+body[data-page="doctors"] .provider-card{border-radius:18px;padding:26px;box-shadow:0 7px 26px rgba(25,55,70,.045)}
+body[data-page="doctors"] .provider-actions .btn{min-height:44px;padding:11px 18px!important}
+body[data-page="doctors"] .provider-actions .text-link{padding:0;border:0}
+
+/* Homepage quick actions: make each item read as an interactive control. */
+body[data-page="home"] .quick-actions{gap:12px;padding-bottom:48px}
+body[data-page="home"] .quick-actions>a,
+body[data-page="home"] .quick-actions>a:first-child,
+body[data-page="home"] .quick-actions>a:last-child{border:1px solid #dfe8ec;border-radius:16px!important;min-height:116px;padding:22px;box-shadow:0 5px 20px rgba(25,55,70,.035);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease}
+body[data-page="home"] .quick-actions>a:hover{transform:translateY(-3px);background:#fff;border-color:#bcd4e0;box-shadow:0 12px 30px rgba(25,55,70,.08);z-index:2}
+body[data-page="home"] .quick-actions b{right:20px;bottom:20px}
+body[data-page="home"] .specialty-row{border:0;overflow:visible;gap:14px}
+body[data-page="home"] .specialty-item{border:1px solid #dfe8ec!important;border-radius:18px!important;min-height:210px;box-shadow:0 6px 24px rgba(25,55,70,.035);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+body[data-page="home"] .specialty-item:hover{background:#fff;transform:translateY(-3px);border-color:#bfd5e0!important;box-shadow:0 13px 32px rgba(25,55,70,.08)}
+
+/* Give location/map content breathing room without creating a huge dead zone. */
+body[data-page="home"] .home-location{gap:48px}
+body[data-page="home"] .mini-map{min-height:270px}
+
+/* Keep all page sections from creating accidental overflow or collapsed heights. */
+.section,.page-hero,.doctors-directory,.home-section,.home-doctors,.home-location,.home-trust,.home-final{position:relative}
+img,svg,video{max-width:100%;height:auto}
+
+/* Mobile navigation and compact layouts */
+@media(max-width:800px){
+  .site-header{padding:12px 18px!important;flex-wrap:wrap;gap:8px}
+  .menu-toggle{display:block!important;margin-left:auto}
+  .nav{display:none!important;width:100%;flex-direction:column;align-items:stretch;gap:0!important;padding:8px 0 4px;border-top:1px solid #e7eef2;margin-top:6px}
+  .nav.open{display:flex!important}
+  .nav a{padding:11px 4px!important;font-size:13px!important}
+  .nav a.active:after{display:none}
+  .urgent-bar,.doctors-emergency{font-size:11px!important;padding:8px 14px!important}
+  .service-list{grid-template-columns:1fr!important}
+  .service-item{padding:21px!important}
+  body[data-page="home"] .quick-actions{grid-template-columns:1fr 1fr!important}
+  body[data-page="home"] .quick-actions>a,
+  body[data-page="home"] .quick-actions>a:first-child,
+  body[data-page="home"] .quick-actions>a:last-child{border-radius:16px!important}
+}
+@media(max-width:560px){
+  body[data-page="home"] .quick-actions{grid-template-columns:1fr!important;padding-left:20px;padding-right:20px}
+  body[data-page="home"] .quick-actions>a{min-height:100px}
+  .actions,.home-actions{flex-direction:column;align-items:stretch}
+  .actions .btn,.home-actions .home-btn{width:100%}
+  body[data-page="cardiology"] .page-hero,
+  body[data-page="gastroenterology"] .page-hero,
+  body[data-page="diagnostics"] .page-hero{padding:52px 20px 36px}
+}
