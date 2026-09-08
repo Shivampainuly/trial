@@ -6,7 +6,7 @@
       <div class="vista-footer-grid">
         <div class="vista-footer-brand">
           <a class="vista-footer-logo" href="index.html" aria-label="Vista Clinics home">
-            <img src="download.gif" alt="" aria-hidden="true" style="display:block;width:44px;height:44px;max-width:44px;max-height:44px;object-fit:contain">
+            <img class="vista-footer-mark" src="download.gif" alt="" aria-hidden="true">
             <span><strong>VISTA</strong><small>CLINICS</small></span>
           </a>
           <p>Specialist cardiology, gastroenterology and hepatology care with focused diagnostics in Moosapet, Hyderabad.</p>
