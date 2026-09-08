@@ -6,10 +6,9 @@
       <div class="vista-footer-grid">
         <div class="vista-footer-brand">
           <a class="vista-footer-logo" href="index.html" aria-label="Vista Clinics home">
-            <span class="vista-footer-mark">V</span>
+            <img src="download.gif" alt="" aria-hidden="true" style="display:block;width:44px;height:44px;max-width:44px;max-height:44px;object-fit:contain">
             <span><strong>VISTA</strong><small>CLINICS</small></span>
           </a>
-          <img src="download.gif" alt="" aria-hidden="true" style="display:block;width:44px;height:44px;max-width:44px;max-height:44px;object-fit:contain;margin-top:10px">
           <p>Specialist cardiology, gastroenterology and hepatology care with focused diagnostics in Moosapet, Hyderabad.</p>
           <div class="vista-footer-contact">
             <span>3rd floor, Sri Nilayam, Shiva Sai Colony,<br>Sevalal Nagar, Moosapet, Hyderabad 500018</span>
