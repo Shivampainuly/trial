@@ -1,5 +1,2 @@
-/* Vista Clinics — hero building image */
-.hero-blueprint{position:relative;display:flex!important;align-items:center;justify-content:center;min-height:470px;overflow:hidden;background:url("../images/building.png") center center / contain no-repeat}
-.hero-blueprint > *{display:none!important}
-@media(max-width:900px){.hero-blueprint{min-height:390px}}
-@media(max-width:560px){.hero-blueprint{min-height:315px;margin-top:8px}}
+/* Vista Clinics — hero blueprint reset */
+.hero-blueprint{display:none!important}
