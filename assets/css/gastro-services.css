@@ -1,0 +1,12 @@
+body[data-page="gastro"] .gastro-services .service-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;align-items:stretch}
+body[data-page="gastro"] .gastro-services .service-feature{min-width:0;display:grid;grid-template-rows:220px 1fr;min-height:500px}
+body[data-page="gastro"] .gastro-services .service-media{min-width:0;min-height:220px;overflow:hidden;border-radius:22px 22px 0 0;background:#eef4f6}
+body[data-page="gastro"] .gastro-services .service-media img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s ease}
+body[data-page="gastro"] .gastro-services .service-feature:hover .service-media img{transform:scale(1.025)}
+body[data-page="gastro"] .gastro-services .service-item{height:100%;min-height:280px;margin:0;padding:34px;border:1px solid #dfe7ed;border-top:0;border-radius:0 0 22px 22px;background:#fff;box-shadow:0 8px 28px rgba(22,32,42,.045);display:flex;flex-direction:column;justify-content:center;transition:box-shadow .25s,border-color .25s}
+body[data-page="gastro"] .gastro-services .service-feature:hover .service-item{border-color:#b7d0df;box-shadow:0 16px 40px rgba(22,32,42,.08)}
+body[data-page="gastro"] .gastro-services .service-item .number{display:block;width:auto;height:auto;padding:0;margin:0 0 16px;border-radius:0;background:none;color:#1769aa;font-size:10px;letter-spacing:.15em;font-weight:700}
+body[data-page="gastro"] .gastro-services .service-item h3{margin:0 0 12px;font-family:'Playfair Display',serif;font-size:31px;line-height:1.08;font-weight:500;color:#171717}
+body[data-page="gastro"] .gastro-services .service-item p{margin:0;color:#52636d;font-size:14px;line-height:1.7;max-width:360px}
+@media (max-width:1100px){body[data-page="gastro"] .gastro-services .service-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}body[data-page="gastro"] .gastro-services .service-feature{min-height:480px}}
+@media (max-width:700px){body[data-page="gastro"] .gastro-services .service-list{grid-template-columns:1fr;gap:24px}body[data-page="gastro"] .gastro-services .service-feature{min-height:0;grid-template-rows:230px auto}body[data-page="gastro"] .gastro-services .service-item{min-height:0;padding:30px 26px}body[data-page="gastro"] .gastro-services .service-item h3{font-size:29px}}
