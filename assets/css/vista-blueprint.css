@@ -1,2 +1,5 @@
 /* Vista Clinics — hero blueprint reset */
 .hero-blueprint{display:none!important}
+
+/* Remove specialty artwork from homepage cards */
+body[data-page="home"] .specialty-item{background-image:none!important;padding-right:34px!important}
