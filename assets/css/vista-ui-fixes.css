@@ -108,3 +108,18 @@ body[data-page="home"] .quick-actions b,body[data-page="home"] .specialty-item>b
 
 /* Reduced-motion accessibility */
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* Visual warmth: restrained healthcare photography, replacing abstract specialty artwork. */
+body[data-page="home"] .specialty-item{background-image:none!important;padding-right:34px!important}
+body[data-page="home"] .home-doctors{background-image:linear-gradient(90deg,rgba(247,247,245,.98) 0%,rgba(247,247,245,.94) 45%,rgba(247,247,245,.68) 100%),url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=85');background-size:cover;background-position:center}
+body[data-page="home"] .home-doctors .doctor-strip{background:rgba(255,255,255,.94);backdrop-filter:blur(8px)}
+
+/* Diagnostics cards: prevent cramped label/title alignment. */
+body[data-page="diagnostics"] .service-list{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+body[data-page="diagnostics"] .service-item{display:flex!important;flex-direction:column!important;align-items:flex-start!important;min-height:260px!important;padding:30px!important}
+body[data-page="diagnostics"] .service-item .number{width:auto;height:auto;min-height:0;border-radius:999px;padding:8px 11px;margin-bottom:24px}
+body[data-page="diagnostics"] .service-item h3{margin:0 0 12px!important;max-width:100%}
+body[data-page="diagnostics"] .service-item p{max-width:42ch}
+body[data-page="diagnostics"] .service-item:after{margin-top:auto;align-self:flex-end}
+@media(max-width:900px){body[data-page="diagnostics"] .service-list{grid-template-columns:1fr 1fr!important}}
+@media(max-width:560px){body[data-page="diagnostics"] .service-list{grid-template-columns:1fr!important}}
