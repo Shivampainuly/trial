@@ -16,3 +16,7 @@
 @media(max-width:900px){.hero-blueprint{min-height:390px}.hero-blueprint:after{background-size:22px 22px}.draw-svg{width:min(100%,610px)}}
 @media(max-width:560px){.hero-blueprint{min-height:315px;margin-top:8px}.hero-blueprint:before{width:330px;height:330px}.hero-blueprint:after{inset:7% 0;background-size:18px 18px}.blueprint-marquee span{font-size:18px}}
 @media(prefers-reduced-motion:reduce){.draw-path,.glass-panel,.detail-dot,.blueprint-lines .medical-cross,.blueprint-lines .ecg-path,.blueprint-back .back-block,.blueprint-sign,.blueprint-glow,.blueprint-marquee span{animation:none!important;stroke-dashoffset:0!important;opacity:1!important;transform:none!important}}
+
+/* Continuous SVG tracing — based on the requested drawAndFade loop. */
+.blueprint-lines .draw-path{stroke-dasharray:1;stroke-dashoffset:1;animation:drawAndFade 3s ease-in-out infinite!important;opacity:1!important;transform:none!important}
+@keyframes drawAndFade{0%{stroke-dashoffset:1}50%{stroke-dashoffset:0}100%{stroke-dashoffset:-1}}
