@@ -58,4 +58,11 @@
         <div class="vista-footer-legal"><a href="contact.html">Contact</a><a href="reviews.html">Reviews</a></div>
       </div>
     </div>`;
+
+  if(document.head && !document.getElementById('vista-home-dark-specialties')){
+    var style=document.createElement('style');
+    style.id='vista-home-dark-specialties';
+    style.textContent='@media (prefers-color-scheme: dark){body[data-page="home"] .specialty-row{background:#17212b;border-color:#34414e!important}body[data-page="home"] .specialty-item{background:#17212b!important;border-color:#34414e!important;box-shadow:none!important}body[data-page="home"] .specialty-item:hover{background:#1d2a35!important;border-color:#4a6474!important}body[data-page="home"] .specialty-item h3{color:#f4f7fa!important}body[data-page="home"] .specialty-item p{color:#b8c4cd!important}body[data-page="home"] .specialty-item>b{background:#f4f7fa!important;color:#17212b!important}body[data-page="home"] .specialty-item:hover>b{background:#1769aa!important;color:#fff!important}}';
+    document.head.appendChild(style);
+  }
 })();
