@@ -61,3 +61,62 @@ button,input,select,textarea{font-family:Arial,Helvetica,sans-serif !important;f
 
 /* Remove the clinic phone number from the navigation/header. */
 .header-phone{display:none!important}
+
+/* Real local map preview: nearby roads/labels from OpenStreetMap; click opens the exact Google Maps location. */
+body[data-page="home"] .mini-map{
+  background-color:#e5e3df!important;
+  background-image:url('https://tile.openstreetmap.org/14/11759/7384.png'),url('https://tile.openstreetmap.org/14/11760/7384.png'),url('https://tile.openstreetmap.org/14/11761/7384.png'),url('https://tile.openstreetmap.org/14/11759/7385.png'),url('https://tile.openstreetmap.org/14/11760/7385.png'),url('https://tile.openstreetmap.org/14/11761/7385.png')!important;
+  background-repeat:no-repeat!important;
+  background-size:256px 256px!important;
+  background-position:-143px 44px,113px 44px,369px 44px,-143px -212px,113px -212px,369px -212px!important;
+  border:1px solid #c7cdd1!important;
+  box-shadow:0 8px 26px rgba(22,32,42,.12)!important;
+}
+body[data-page="home"] .mini-map:before{
+  content:'© OpenStreetMap contributors'!important;
+  top:10px!important;
+  left:10px!important;
+  background:rgba(255,255,255,.94)!important;
+  color:#5f6368!important;
+  border-radius:4px!important;
+  padding:5px 7px!important;
+  font:500 10px/1.2 Arial,sans-serif!important;
+  letter-spacing:0!important;
+  box-shadow:0 1px 4px rgba(0,0,0,.16)!important;
+  z-index:5!important;
+}
+body[data-page="home"] .mini-map:after{
+  content:''!important;
+  position:absolute!important;
+  left:50%!important;
+  top:50%!important;
+  width:18px!important;
+  height:18px!important;
+  border-radius:50% 50% 50% 0!important;
+  background:#d93025!important;
+  transform:translate(-50%,-65%) rotate(-45deg)!important;
+  border:3px solid #fff!important;
+  box-shadow:0 2px 8px rgba(0,0,0,.32)!important;
+  z-index:6!important;
+}
+body[data-page="home"] .mini-map span{
+  left:50%!important;
+  top:calc(50% + 24px)!important;
+  transform:translateX(-50%)!important;
+  background:rgba(255,255,255,.96)!important;
+  color:#202124!important;
+  border:1px solid rgba(60,64,67,.15)!important;
+  padding:6px 9px!important;
+  border-radius:4px!important;
+  font:700 12px/1.2 Arial,sans-serif!important;
+  box-shadow:0 2px 7px rgba(0,0,0,.18)!important;
+  z-index:7!important;
+  white-space:nowrap!important;
+}
+body[data-page="home"] .mini-map:hover{box-shadow:0 14px 34px rgba(22,32,42,.16)!important;transform:translateY(-2px)!important}
+@media(max-width:760px){
+  body[data-page="home"] .mini-map{
+    background-position:-276px 14px,-20px 14px,236px 14px,-276px -242px,-20px -242px,236px -242px!important;
+  }
+  body[data-page="home"] .mini-map span{font-size:11px!important}
+}
