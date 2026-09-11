@@ -58,3 +58,6 @@ button,input,select,textarea{font-family:Arial,Helvetica,sans-serif !important;f
 
 /* Global dark-mode fixes are loaded with the existing shared stylesheet. */
 @import url('./dark-mode-fixes.css');
+
+/* Remove the clinic phone number from the navigation/header. */
+.header-phone{display:none!important}
